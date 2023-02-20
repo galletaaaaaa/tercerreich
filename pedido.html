@@ -50,11 +50,11 @@
             event.preventDefault();
             const formData=new FormData(form);
             const order={
-                 nombre=formData.get("nombre"),
-                 apellido=formData.get("apellido"),
-                 telefono=formData.get("telefono"),
-                 direccion=formData.get("direccion"),
-                 colonia=formData.get("colonia")
+                 nombre:formData.get("nombre"),
+                 apellido:formData.get("apellido"),
+                 telefono:formData.get("telefono"),
+                 direccion:formData.get("direccion"),
+                 colonia:formData.get("colonia")
         };
         localStorage.setItem("orden",JSON.stringify(orden));
         window.location.href="pedidorealizado.html";
