@@ -42,7 +42,7 @@
         <p>Sexo: <input type="radio" id="sexo" name="sexo" value="hombre">Hombre<input type="radio" name="sexo" value="mujer">Mujer</p>
         
         <input type="submit" value="Enviar">
-        <input type="reset"
+        <input type="reset" value="Borrar">
     </form>
     <script>
         const form=document.getElementById("pedido");
@@ -50,10 +50,10 @@
             event.preventDefault();
             const formData=new FormData(form);
             const order={
-                 nombre=formData.get("nombre")
-                 apellido=formData.get("apellido")
-                 telefono=formData.get("telefono")
-                 direccion=formData.get("direccion")
+                 nombre=formData.get("nombre"),
+                 apellido=formData.get("apellido"),
+                 telefono=formData.get("telefono"),
+                 direccion=formData.get("direccion"),
                  colonia=formData.get("colonia")
         };
         localStorage.setItem("orden",JSON.stringify(orden));
