@@ -40,10 +40,13 @@
         <p>Direccion: <input type="text" id="direccion" name="direccion" size="40"></p>
         <p>Colonia: <input type="text" id="Colonia" name="telefono" size="30"></p>
         <p>Sexo: <input type="radio" id="sexo" name="sexo" value="hombre">Hombre<input type="radio" name="sexo" value="mujer">Mujer</p>
+        
+        <input type="submit" value="Enviar">
+        <input type="reset"
     </form>
     <script>
         const form=document.getElementById("pedido");
-        form.addEventListener("submit", function (event){
+        form.addEventListener("submit", function(event){
             event.preventDefault();
             const formData=new FormData(form);
             const order={
