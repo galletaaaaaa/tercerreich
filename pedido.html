@@ -39,7 +39,28 @@
         <p>Telefono: <input type="text" id="telefono" name="telefono" size="20"></p>
         <p>Direccion: <input type="text" id="direccion" name="direccion" size="40"></p>
         <p>Colonia: <input type="text" id="Colonia" name="telefono" size="30"></p>
-        
+        <hr>
+        <select name="menu" id="menu">
+            <optgroup label="Tortas">
+                <option value="hamburguesa">Hamburguesa</option>
+                <option value="clubsandwich">ClubSandwich</option>
+                <option value="hamburguesa">Hamburguesa</option>
+            </optgroup>
+            <optgroup label="Tacos">
+                <option value="tacosbistek">TacosdeBistec</option>
+                <option value="tacosalpastor">TacosalPastor</option>
+                <option value="sincronizada">Sincronizada</option>
+            </optgroup>
+        </select>
+
+
+        <title1>Verduras</title1><br>
+        Vegetales:
+        <input type="checkbox" id="tomate" checked><label for="tomate">Tomate</label>
+        <input type="checkbox" id="cebolla" checked><label for="cebolla">Cebolla</label>
+        <input type="checkbox" id="lechuga" checked><label for="lechuga">Lechuga</label>
+        <input type="checkbox" id="pepinillo" checked><label for="pepinillo">Pepinillo</label>
+
         <input type="submit" value="Enviar">
         <input type="reset" value="Borrar">
     </form>
@@ -53,7 +74,11 @@
                  apellido:formData.get("apellido"),
                  telefono:formData.get("telefono"),
                  direccion:formData.get("direccion"),
-                 colonia:formData.get("colonia")
+                 colonia:formData.get("colonia"),
+                 tomate:document.getElementById("tomate").checked ? "Si" : "No",
+                 cebolla:document.getElementById("cebolla").checked ? "Si" : "No",
+                 lechuga:document.getElementById("lechuga").checked ? "Si" : "No",
+                 pepinilo:document.getElementById("pepinillo").checked ? "Si" : "No",
         };
         localStorage.setItem("orden",JSON.stringify(orden));
         window.location.href="pedidorealizado.html";
