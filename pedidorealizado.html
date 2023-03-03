@@ -14,8 +14,11 @@
     <div style="margin: 24px;">
         <nav class="navbar navbar-inverse navbar-stick-static-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Inicio</a>
                 <ul class="nav navbar-nav">
+                    <li>
+                        <li class="active">
+                        <a href="index.html">inicio</a>
+                    </li>
                     <li>
                         <a href="menu.html">Menu</a>
                     </li>
@@ -38,7 +41,6 @@
         <li><strong>Telefono: </strong> <span id="telefono"></span></li>
         <li><strong>Direccion: </strong> <span id="direccion"></span></li>
         <li><strong>Colonia: </strong> <span id="colonia"></span></li>
-        <li><strong>Colonia: </strong> <span id="colonia"></span></li>
         <li><strong>Tomate: </strong> <span id="tomate"></span></li>
         <li><strong>Cebolla: </strong> <span id="cebolla"></span></li>
         <li><strong>Lechuga: </strong> <span id="lechuga"></span></li>
@@ -52,6 +54,10 @@
         document.getElementById("telefono").textContent=orden.telefono;
         document.getElementById("direccion").textContent=orden.direccion;
         document.getElementById("colonia").textContent=orden.colonia;
+        document.getElementById("tomate").textContent=orden.tomate;
+        document.getElementById("cebolla").textContent=orden.cebolla;
+        document.getElementById("lechuga").textContent=orden.lechuga;
+        document.getElementById("pepinillo").textContent=orden.pepinillo;
     </script>
     
 </body>
