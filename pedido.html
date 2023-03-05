@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <title>Pagina 1</title>
+    <title>Inicio</title>
 </head>
 <body>
     <div style="margin: 24px;">
@@ -16,7 +16,7 @@
             <div class="container">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">inicio</a>
+                        <a href="index.html">Inicio</a>
                     </li>
                     <li>
                         <a href="menu.html">Menu</a>
@@ -34,7 +34,7 @@
         </nav>
     </div>
     <h1 style="text-align: left;">PEDIDO</h1>
-    <titulo1>Pedido</titulo1><br>
+    <br>
 
     <form id="pedido">
         <p>Nombre: <input type="text" id="nombre" name="nombre" size="30"></p>
@@ -43,34 +43,40 @@
         <p>Direccion: <input type="text" id="direccion" name="direccion" size="40"></p>
         <p>Colonia: <input type="text" id="colonia" name="colonia" size="30"></p>
         <hr>
+
         <select name="menu" id="menu">
         
             <optgroup label="Tortas">
-                <option value="hamburguesa">Hamburguesa</option>
-                <option value="clubsandwich">ClubSandwich</option>
-                <option value="hamburguesa">Hamburguesa</option>
+                <option value="hamburguesaconqueso">HamburguesaSencilla</option>
+                <option value="hamburguesacontocino">HamburguesaConTocino</option>
+                <option value="hamburguesaconqueso">HamburguesaConQueso</option>
             </optgroup>
             <optgroup label="Tacos">
-                <option value="tacosbistek">TacosdeBistec</option>
-                <option value="tacosalpastor">TacosalPastor</option>
-                <option value="sincronizada">Sincronizada</option>
+                <option value="tacosfrijoles">TacosDeFrijoles</option>
+                <option value="tacosdechorizo">TacosDeChorizo</option>
+                <option value="sincronizadagrande">SincronizadaGrande</option>
             </optgroup>
         </select>
 
 
-        <title1>Verduras</title1><br>
-        Vegetales:
+        <title1>VERDURAS Y ARMAS:</title1><br>
+        OPCIONES:
         <input type="checkbox" id="tomate" checked><label for="tomate">Tomate</label>
         <input type="checkbox" id="cebolla" checked><label for="cebolla">Cebolla</label>
         <input type="checkbox" id="lechuga" checked><label for="lechuga">Lechuga</label>
-        <input type="checkbox" id="pepinillo" checked><label for="pepinillo">Pepinillo</label></br>
+        <input type="checkbox" id="pepinillo" checked><label for="pepinillo">Pepinillo</label>
+        <input type="checkbox" id="fusiles" checked><label for="fusiles">Fusiles</label>
+        <input type="checkbox" id="subfusiles" checked><label for="subfusiles">Subfusiles</label>
+        <input type="checkbox" id="escopetas" checked><label for="escopetas">Escopetas</label>
+        <input type="checkbox" id="granadas" checked><label for="granadas">Granadas</label></br>
 
         <input type="submit" value="Enviar">
         <input type="reset" value="Borrar">
     </form>
+
     <script>
         const form=document.getElementById("pedido");
-        form.addEventListener("submit", function(event){
+        form.addEventListener("submit",function (event){
             event.preventDefault();
             const formData=new FormData (form);
             const orden={
@@ -82,7 +88,11 @@
                  tomate:document.getElementById("tomate").checked ? "Si": "No",
                  cebolla:document.getElementById("cebolla").checked ? "Si": "No",
                  lechuga:document.getElementById("lechuga").checked ? "Si": "No",
-                 pepinillo:document.getElementById("pepinillo").checked ? "Si": "No"
+                 pepinillo:document.getElementById("pepinillo").checked ? "Si": "No",
+                 fusiles:document.getElementById("fusiles").checked ? "Si": "No",
+                 subfusiles:document.getElementById("subfusiles").checked ? "Si": "No",
+                 escopetas:document.getElementById("escopetas").checked ? "Si": "No",
+                 granadas:document.getElementById("granadas").checked ? "Si": "No"
         };
         localStorage.setItem("orden",JSON.stringify(orden));
         window.location.href="pedidorealizado.html";
